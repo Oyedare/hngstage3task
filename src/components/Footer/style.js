@@ -4,6 +4,7 @@ export const StyledFooter = styled.footer`
     background-color: var(--footer-bg);
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     padding: 4rem 4rem 2.5rem;
     gap: 12rem;
     .left{
@@ -49,5 +50,36 @@ export const StyledFooter = styled.footer`
                 margin-bottom: .5rem;
             }
         }
+    }
+    @media screen and (max-width: 1201px) {
+        gap: 8rem;
+        padding: 4rem 4rem 2.5rem;
+        .right{
+            gap: 10rem;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        gap: 6rem;
+        .right{
+            gap: 7rem;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding: 4rem 3rem 2.5rem;   
+        .right{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+        .left{
+            .socials{
+                margin-top: 3rem;
+            }
+        }
+    }
+    @media screen and (max-width: 425px) {
+        padding: 4rem 1.5rem 2.5rem;
     }
 `

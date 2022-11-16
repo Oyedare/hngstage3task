@@ -33,6 +33,17 @@ const PlaceToStay = () => {
           <p>Farm</p>
         </div>
 
+        <select name="" id="">
+          <option value="">Resturant</option>
+          <option value="">Cottage</option>
+          <option value="">Castle</option>
+          <option value="">fantast city</option>
+          <option value="">beach</option>
+          <option value="">Carbins</option>
+          <option value="">Off-grid</option>
+          <option value="">Farm</option>
+        </select>
+
         <div className='location'>
           <p>Location</p>
           <img src={setting} alt="" />

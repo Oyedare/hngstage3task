@@ -14,7 +14,7 @@ export const StyledHome = styled.div`
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 48px;
+            gap: 3rem;
             h3{
                 font-weight: 400;
                 font-size: 3.5rem;
@@ -81,7 +81,6 @@ export const StyledHome = styled.div`
         gap: 2rem;
         width: 91%;
         margin: 3rem auto;
-        /* margin: auto; */
         h2{
             font-weight: 700;
             font-size: 3rem;
@@ -92,6 +91,7 @@ export const StyledHome = styled.div`
             display: flex;
             flex-direction: row;
             align-items: flex-start;
+            justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
             img{
@@ -139,5 +139,119 @@ export const StyledHome = styled.div`
                 cursor: pointer;
             }
         }
+    }
+    @media screen and (max-width: 1201px) {
+        .header{
+            width: 95%;
+            gap: 0;
+            &-text{
+                h3{
+                    font-size: 3rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                    width: 90%;
+                }
+            }
+        }
+        .banner-sm{
+            gap: 12rem;
+        }
+        .inspiration{
+            width: 100%;
+            .images{
+                column-gap: .5rem;
+                row-gap: 2.5rem;
+            }
+        }
+        .banner-lg{
+            padding: 6rem 3rem 3rem;
+            gap: 1rem;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .header{
+            &-text{
+                width: 50%;
+                .search{
+                    width: 85%;
+                }
+            }
+        }
+        .banner-lg{
+            /* gap: 0rem; */
+            /* justify-content: space-between; */
+            .text{
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .header{
+            flex-direction: column;
+            gap: 2rem;
+            &-text{
+                width: 100%;
+                p{
+                    width: 100%;
+                }
+                .search{
+                    width: 100%;
+                }
+            }
+        }
+        .banner-sm{
+            gap:  2.5rem;
+            /* padding: 0.625rem 8rem; */
+        }
+        .inspiration{
+            h2{
+                font-size: 2.5rem;
+            }
+        }
+        .banner-lg{
+            flex-direction: column;
+            gap: 4rem;
+        }
+    }
+    @media screen and (max-width: 425px) {
+        .header{
+            &-text{
+                .search{
+                    width: 95%;
+                }
+            }
+            .img{
+                display: none;
+            }
+        }
+        .banner-sm{
+            /* gap: 0rem; */
+            img{
+                width: 40%;
+            }
+        }
+        .inspiration{
+            h2{
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+        .banner-lg{
+            .text{
+                width: 100%;
+            }
+            .img{
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 320px) {
+        .inspiration{
+            h2{
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }   
     }
 `

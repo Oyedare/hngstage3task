@@ -5,11 +5,18 @@ export const StyledContainer = styled.div`
     padding-top: 5rem;
     margin: auto;
     display: flex;
+    align-items: center;
     flex-direction: column;
     .top{
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 4rem;
+        width: 100%;
+
+        select{
+            display: none;
+        }
         .list{
             display: flex;
             flex-direction: row;
@@ -23,7 +30,7 @@ export const StyledContainer = styled.div`
             }
         }
         .location{
-            width: 161px;
+            width: 10.0625rem;
             height: 3rem;
             border: 1px solid #B4B4B4;
             border-radius: 8px;
@@ -37,13 +44,58 @@ export const StyledContainer = styled.div`
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+        justify-content: center;
         padding: 0px;
         gap: 24px;
-        width: 1240px;
+        width: 77.5rem;
         margin: 2.5rem 0;
         flex-wrap: wrap;
         img{
             cursor: pointer;
+        }
+    }
+    @media screen and (max-width: 1201px) {
+        width: 95%;
+        .top{
+            width: 100%;
+            .list{
+                gap: 2rem;
+                p{
+                    font-size: 1rem;
+                    line-height: 1rem;
+                }
+            }
+        }
+        .images{
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .top{
+            gap: 2rem;
+            .list{
+                gap: .6rem;
+            }
+            .location{
+                width: 8rem;
+                
+            }
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        padding-top: 2rem;
+        .top{
+            justify-content: space-around;
+            .list{
+                display: none;
+            }
+            select{
+                display: block;
+                border: 1px solid #B4B4B4;
+                border-radius: 8px;
+                padding: .8rem 2rem;
+            }
         }
     }
 `
